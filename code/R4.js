@@ -4,15 +4,15 @@
     }).then ( respuesta => {
             document.getElementById('clima').innerHTML = `
             <tr>
-                <th>Ciudad</th>
                 <th>Clima</th>
+                <th>Ciudad</th>
                 <th>Temperatura</th>
                 <th>Sensación Térmica</th>
                 <th>Humedad</th>
             </tr>
             <tr>
+                <td><img src=${respuesta.data.current.weather_icons[0]} class="icono"></td>
                 <td>${respuesta.data.location.name}, ${respuesta.data.location.country}</td>
-                <td><img src=${respuesta.data.current.weather_icons[0]} class="icon"></td>
                 <td>${respuesta.data.current.temperature}°C</td>
                 <td>${respuesta.data.current.feelslike}°C</td>
                 <td>${respuesta.data.current.humidity}%</td>
