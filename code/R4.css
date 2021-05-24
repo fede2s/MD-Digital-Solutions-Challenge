@@ -36,6 +36,31 @@ td:nth-child(3),td:nth-child(4),td:nth-child(5){
     text-align: right;
 }
 
+body{
+    background-color:rgb(235, 255, 255);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+article{
+    padding:1em;
+    margin:1em;
+    max-width: 15em;
+    background-color:white;
+    box-shadow: lightblue 0em 0em 3em;
+}
+article div:first-child{
+    width: 100%;
+}
+article div:first-child img{
+    width:100%;
+}
+
+
 @media  (min-width: 20rem){
     body{
         font-size:0.33rem;
@@ -65,4 +90,27 @@ td:nth-child(3),td:nth-child(4),td:nth-child(5){
     body{
         font-size:1rem;
     }
+}
+
+
+@media (orientation:landscape) {
+    
+    article{
+        display:flex;
+        flex-direction: row;
+        max-width: initial;
+        align-items: center;
+    }
+    article div:first-child{
+        width: 20em;
+    }
+    article div:nth-child(2){
+        max-width: 20em;
+        padding: 1em
+    }
+
+}
+
+article{
+    font-size: 1rem;
 }
